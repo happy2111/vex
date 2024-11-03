@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Кассетные потолки</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      color: #333;
+      background-color: #f9f9f9;
+      padding: 20px;
+    }
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+    .title {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .image-section {
+      flex: 1 1 60%;
+      padding: 15px;
+    }
+    .details-section {
+      flex: 1 1 40%;
+      padding: 15px;
+    }
+    .format-section, .color-section {
+      margin-bottom: 20px;
+    }
+    .format-title, .color-title {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .format-options, .color-options {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .format-option .img1 {
+      width: 40px;
+      height: 40px;
+      background-image: url(img/format1.jpg);
+      background-size: cover;
+      background-position: center;
+    }
+    .format-option, .color-option {
+      width: 40px;
+      height: 40px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      margin: 5px;
+      cursor: pointer;
+      transition: transform 0.3s, border-color 0.3s;
+    }
+    .format-option:hover, .color-option:hover {
+      transform: scale(1.1);
+      border-color: #666;
+    }
+    .color-option {
+      border-radius: 50%;
+    }
+    .price {
+      font-size: 1.5rem;
+      color: #e63946;
+      font-weight: bold;
+    }
+    .info {
+      font-size: 0.9rem;
+      color: #555;
+      margin-top: 10px;
+    }
+    .availability {
+      color: #2a9d8f;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="title">Кассетные потолки</div>
+  <div class="row">
+    <div class="image-section">
+      <img src="images2/ceiling-image.png" alt="Кассетный потолок" style="width: 100%; border-radius: 8px;">
+    </div>
+    <div class="details-section">
+      <div class="format-section">
+        <div class="format-title">Формат</div>
+        <div class="format-options">
+          <div  class="format-option" style="background-color: #f0f0f0;"><img 
+            class="img1" src="images/ikonka/ikonka-1--50x50.png" alt=""></div>
+          <div class="format-option" style="background-color: #fff;"><img 
+            class="img1" src="images/ikonka/ikonka2.png" alt=""></div>
+          <div class="format-option" style="background-color: #ddd;"><img 
+            class="img1" src="images/ikonka/ikonka3.png" alt=""></div>
+          <div class="format-option" style="background-color: #bbb;"><img 
+            class="img1" src="images/ikonka/ikonka4.png" alt=""></div>
+          <div class="format-option" style="background-color: #000;"><img 
+            class="img1" src="images/ikonka/ikonka5.png" alt=""></div>
+          <div class="format-option" style="background-color: #999;"><img 
+            class="img1" src="images/ikonka/ikonka6.png" alt=""></div>
+          <div class="format-option" style="background-color: #999;"><img 
+              class="img1" src="images/ikonka/ikonka7.png" alt=""></div>
+          <div class="format-option" style="background-color: #999;"><img 
+                class="img1" src="images/ikonka/ikonka8.png" alt=""></div>    
+              
+        </div>
+      </div>
+      <div class="color-section">
+        <div class="color-title">Цвет</div>
+        <div class="color-options">
+          <div class="color-option" style="background-color: #ffffff;"></div>
+          <div class="color-option" style="background-color: #cccccc;"></div>
+        </div>
+      </div>
+      <div class="price">152,400 UZS</div>
+      <div class="info">Цена без учета аксессуаров и стоимости работы (цены обсуждаются с менеджером).</div>
+      <div class="info">Цена за наличку и за перечисление идентична.</div>
+      <div class="availability">Доступно для предзаказа</div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
+
+

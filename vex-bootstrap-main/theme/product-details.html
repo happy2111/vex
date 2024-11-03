@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mahsulotni Tanlash</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: hsl(210, 36%, 96%); /* Yengil fon rangi */
+    }
+    .container {
+      border-radius: 15px;
+      background-color: #ffffff; /* Oq fon */
+      padding: 30px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s; /* Hover effekt */
+    }
+    .container:hover {
+      transform: scale(1.02); /* Hover effekt */
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #333; /* Sariq rang */
+      font-family: 'Arial', sans-serif;
+    }
+    .color-option, .size-option {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: inline-block;
+      margin: 5px;
+      cursor: pointer;
+      border: 2px solid transparent; /* Tugmalar atrofida chegara */
+      transition: border 0.3s, transform 0.3s; /* Border va transform effektlari */
+    }
+    .color-option:hover, .size-option:hover {
+      border: 2px solid #007bff; /* Hover bo'lganda chegara rangi */
+      transform: scale(1.1); /* Hover bo'lganda kattalashtirish */
+    }
+    #product-image {
+      max-width: 100%;
+      border: 1px solid #ddd; /* Rasm atrofida chegara */
+      border-radius: 10px; /* Yumshoq burchaklar */
+      margin-bottom: 20px;
+      transition: transform 0.3s; /* Rasmni kattalashtirish animatsiyasi */
+    }
+    #product-image:hover {
+      transform: scale(1.05); /* Rasmni kattalashtirish */
+    }
+    #product-price {
+      font-weight: bold;
+      font-size: 1.5rem;
+      color: #28a745; /* Narx rangi */
+      margin-top: 20px; /* Yuqoridagi elementlardan masofa */
+    }
+    .btn-custom {
+      width: 70px; /* Tugmalar kengligini o'zgartirish */
+      transition: background-color 0.3s, color 0.3s;
+    }
+    .btn-custom:hover {
+      background-color: #007bff; /* Hover bo'lganda fon rangi */
+      color: #ffffff; /* Hover bo'lganda matn rangi */
+    }
+  </style>
+</head>
+<body>
+
+<div class="container my-5">
+  <h2>Mahsulotni Tanlang</h2>
+  <div class="row">
+    <div class="col-md-6">
+      <img id="product-image" src="images/5x5-white.png" alt="Mahsulot rasmi" title="Mahsulot rasmi">
+    </div>
+    <div class="col-md-6">
+      <h4>O'lchamni tanlang</h4>
+      <div>
+        <button class="size-option btn btn-outline-secondary btn-custom" onclick="updateImage('5x5')">5x5</button>
+        <button class="size-option btn btn-outline-secondary btn-custom" onclick="updateImage('10x10')">10x10</button>
+        <button class="size-option btn btn-outline-secondary btn-custom" onclick="updateImage('15x15')">15x15</button>
+      </div>
+      <h4 class="mt-4">Rangni tanlang</h4>
+      <div>
+        <div class="color-option bg-white" onclick="updateImage(undefined, 'white')" title="Oq rang"></div>
+        <div class="color-option bg-secondary" onclick="updateImage(undefined, 'gray')" title="Kul rang"></div>
+        <div class="color-option" style="background-color: brown;" onclick="updateImage(undefined, 'brown')" title="Jigarrang rang"></div>
+        <div class="color-option bg-dark" onclick="updateImage(undefined, 'black')" title="Qora rang"></div>
+      </div>
+      <h4 id="product-price">Narx: $40</h4> <!-- Narxni ko'rsatish joyi -->
+    </div>
+  </div>
+</div>
+
+<script>
+  let currentSize = '5x5';
+  let currentColor = 'white';
+
+  // O'lchamlar va narxlar
+  const priceList = {
+    '5x5': 40,
+    '10x10': 30,
+    '15x15': 20
+  };
+
+  function updateImage(size, color) {
+    if (size) currentSize = size; // O'lchamni yangilash
+    if (color) currentColor = color; // Rangni yangilash
+
+    // Rasm manzilini yangilang
+    document.getElementById('product-image').src = `images/${currentSize}-${currentColor}.png`;
+
+    // Narxni yangilang
+    document.getElementById('product-price').innerText = `Narx: $${priceList[currentSize]}`;
+  }
+</script>
+
+</body>
+</html>
